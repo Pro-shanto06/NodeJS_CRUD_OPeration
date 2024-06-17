@@ -6,13 +6,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors(
-    {
-    origin : 'https://simple-crud-operations.vercel.app',
-    methods: ["POST","GET","PUT","DELETE"],
-    credentials : true
-    }
-    ));
+app.use(cors());
 
 app.use('/employees', employeeRoutes);
 
